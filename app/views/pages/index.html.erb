@@ -1,0 +1,49 @@
+<div class="container px-4 px-lg-5">
+  <!-- Heading Row-->
+  <div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-7">
+        <%= image_tag('random_code.jpg', class: "img-fluid rounded mb-4 mb-lg-0" ) %>
+    </div>
+    <div class="col-lg-5">
+      <h1 class="font-weight-light">NTR Computer Services</h1>
+      <p>
+        <%= render 'shared/part', part: @page.get_part("main") %>
+      </p>
+      <a class="btn btn-primary" href="#!">Get More Info!</a>
+      <%= link_to "edit", edit_part_path(@page.get_part("main")), class: "btn btn-sm btn-outline-secondary", :data => {:turbo => "false"} if admin_user? %>
+    </div>
+  </div>
+  <!-- Call to Action-->
+  <div class="card text-white bg-secondary my-5 py-4 text-center">
+    <div class="card-body">
+      <p class="text-white m-0">
+        Try out our <a class="link-light" href="https://anynote.ntr-tech.com" target="_blank">anynote</a> application! Create store organize simple notes with this application.
+      </p>
+    </div>
+  </div>
+  <!-- Content Row-->
+  <div class="row gx-4 gx-lg-5">
+    <div class="col-md-6 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <%= render 'shared/part', part: @page.get_part("service_1") %>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+          <%= link_to "edit", edit_part_path(@page.get_part("service_1")), class: "btn btn-sm btn-outline-secondary", :data => {:turbo => "false"} if admin_user? %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <%= render 'shared/part', part: @page.get_part("service_2") %>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary btn-sm" href="#!">More Info</a>
+          <%= link_to "edit", edit_part_path(@page.get_part("service_2")), class: "btn btn-sm btn-outline-secondary", :data => {:turbo => "false"} if admin_user? %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

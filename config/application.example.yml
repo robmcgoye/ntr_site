@@ -1,0 +1,18 @@
+# this is an example
+default: &default
+  contact_form_email_to: "to@domain.com"
+  send_email_from: "from@domain.com"
+  message_id_domain: "domain.com"
+  smtp_port: 587
+  smtp_server: "smtp.mailserver"
+  
+development:
+  <<: *default
+  host: "http://hostname:3000"
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  host: "https://hostname"

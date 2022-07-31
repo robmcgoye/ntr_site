@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <div class="card mb-3 shadow-lg rounded border" >
+    <div class="card-body text-dark">
+      <h1 class="text-center mt-3">About</h1>
+      <div class="container">
+        <div class="row">
+          <div class="row-10">
+            <%= render 'shared/part', part: @page.get_part("main") %>
+            <br>
+          <%= link_to "edit", edit_part_path(@page.get_part("main")), class: "btn btn-sm btn-outline-secondary", :data => {:turbo => "false"} if admin_user? %>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
