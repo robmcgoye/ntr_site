@@ -60,10 +60,10 @@ gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 gem 'mini_magick', '~> 4.11'
 gem 'invisible_captcha', '~> 2.0'
 
-# group :production do
-#   gem 'pg', '~> 1.4', '>= 1.4.1'
-#   # gem 'sqlite3', '~> 1.4'
-# end
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.1'
+  # gem 'sqlite3', '~> 1.4'
+end
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -71,12 +71,12 @@ group :development, :test do
 end
 
 group :development do
-  # gem 'capistrano', '~> 3.17'
-  # gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
-  # gem 'capistrano-passenger', '~> 0.2.1'
-  # gem 'capistrano-rbenv', '~> 2.2'
-  # gem 'ed25519', '~> 1.3'
-  # gem 'bcrypt_pbkdf', '~> 1.1'
+  gem 'capistrano', '~> 3.17'
+  gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
+  gem 'capistrano-passenger', '~> 0.2.1'
+  gem 'capistrano-rbenv', '~> 2.2'
+  gem 'ed25519', '~> 1.3'
+  gem 'bcrypt_pbkdf', '~> 1.1'
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
