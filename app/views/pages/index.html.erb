@@ -11,6 +11,7 @@
         <%= render 'shared/part', part: @page.get_part("main") %>
       </p>
       <%= link_to "Get More Info!", new_contact_form_path, class: "btn btn-primary" %>
+      <%= link_to "Remote Support", "/rustdesk/rustdesk.zip", class: "btn btn-primary" %>
       <%= link_to "edit", edit_part_path(@page.get_part("main")), class: "btn btn-sm btn-outline-secondary", :data => {:turbo => "false"} if admin_user? %>
     </div>
   </div>
